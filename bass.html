@@ -12,19 +12,23 @@
 		</title>
 		<!-- link to my css file -->
 		<link rel="stylesheet" type="text/css" href="styles.css">
-		
+		<!-- link to bootstrap css file -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- bootstrap for javascript files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="jquery.js"></script>
 	</head>
 	<body id="body">
-	<div>
+	<div id="Title">
 	<!-- logo for the website-->
 		<img style="float:left" src="images/panlogo.png">
-		<H1 style="color:white">
+		<h1>
 								<i> 
 									WELCOME TO PAN
 								</i>
 		</h1>
-		<br>
-		<br>
+		</div>
 		<!-- this is the navigation side bar for the page -->
 		<div id="nav" class="w3-sidenav w3-white w3-card-2">
 			<ul>
@@ -32,27 +36,30 @@
 				<br>
 				<br>
 				<li>
-					<a href="index.html"> HOME </a>
+					<a href="index.html"><p> HOME </p></a>
 				</li>
 				<br>
 				<li>
-					<a href="tenor.html"> TENOR </a>
+					<a href="tenor.html"><p> TENOR </p></a>
 				</li>
 				<br>
 				<li>
-					<a href="bass.html"> BASS </a>
+					<a href="bass.html"><p> BASS </p></a>
 				</li>
 			</ul>
 		</div>
 		<!-- this is information about the pan in a separate portion of the page -->
 		<div id="pan">
-			<img src="pan2/sixbassnotes.png" width="75%" height="100%">
+			<video  width="100%" height="100%" autoplay="true" controls="controls">
+				<source id="steel" src="videos/b6note.mp4" type="video/mp4"></source>
+			</video>
 		</div>
 		<!-- this is the portion for the notes -->
 		<div id="note">
 		<!-- adding the buttons for the notes -->
-			<button type="button">A</button> <button type="button">B</button> <button type="button">C</button> <button type="button">D</button> 
-			<button type="button">E</button> <button type="button">F</button> <button type="button">C#</button> <button type="button">F#</button>
+			<button type="button" onclick="pan('videos/smallbnote.mp4');">B</button> <button type="button" onclick="pan('videos/ebassnote.mp4');">E</button> <button type="button" onclick="pan('videos/bigbbassnote.mp4');">B</button>
+			<button type="button" onclick="pan('videos/smalldbassnote.mp4');">D</button> <button type="button" onclick="pan('videos/bigDbassnote.mp4');">D</button> <button type="button"onclick="pan('videos/Abassnote.mp4');">A</button> 
+			<button type="button">C#</button> <button type="button">F#</button>
 			<button type="button">G#</button> <button type="button">Bb</button> <button type="button">Eb</button>
 			<br>
 			<br>
@@ -62,7 +69,7 @@
 			<br>
 			<br>
 		</div>
-		</div>
+		
 	</body>
 	<footer id="footer" >
 	<!-- put info about site -->

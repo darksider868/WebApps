@@ -1,3 +1,4 @@
+/* changes the color of text and changes the name of text when mouse moves over */
 function changecolor()
 {
 	document.getElementById("cool").style.color = "red";
@@ -6,14 +7,15 @@ function changecolor()
 	document.getElementById("cool").style.width = "50%";
 	return true;
 };
-
-function fs6pan()
+/* function to change video when button pressed */
+function pan(pannote)
 {
-	document.getElementById("steel").src ="b6note.gif";
-		settimeout(function(){
-			setInterval(function(){
-			$('#steel').attr('src',$('#steel').attr('src'))
-		},-1)
-},1000)
+	/* checks tag and changes the source of the video and loads the video to play */
+	var video = document.getElementsByTagName('video') [0];
+	
+    var sources = video.getElementsByTagName('source');
+    sources[0].src = pannote;
+    
+    video.load();
 	
 }

@@ -1,18 +1,18 @@
 /* this is styles for the body of the website */
 #body
 {
-	background-color:black;
+	background-color: black;
 	/*set background image */
-	background-image:url("images/background.jpg");
+	background-image: url("images/background.jpg");
 	/* set image to not repeat */
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 	/* set image to cover whole page */
 	background-size: 100% 100%;
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	width:200%;
-	height:200%;
-	float:left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	width: 100%;
+	height: 100%;
+	float: left;
 }
 /* this is styles for the footer */
 #footer
@@ -22,7 +22,7 @@
 	/*keeps footer to the bottom of page */
 	bottom:0;
 	/* set background for footer */
-	background-color:grey;
+	background-color:black;
 	/* have it accross the page */
 	width:100%;
 	height:5%;
@@ -30,19 +30,15 @@
         
 	
 }
-/* set style for paragraph */
-p
-{
-	/* set color to white */
-	color:white;
-}
+
 /* set style for id about */
 #about
 {
 	/* makes a container for the id about */
-	margin-left:30%;
-	margin-right:15%;
-	margin-top:5%;
+	margin-left:10%;
+	margin-right:5%;
+	margin-bottom:5%;
+	margin-top:2%;
 	float:left;
 }
 /* set style for nav id */
@@ -50,12 +46,22 @@ p
 {
     /*creates container for the nav */
 	width:10%;
-	margin-top:22%;
+	margin-top:19%;
 	margin-bottom:5%;
 	position: absolute;
 	margin-left:-1%;
 	float:left;
-	
+	border: 2px solid black;
+	height:50%;
+
+}
+/* set the styles for title */
+#Title
+{
+	/* sets with height and float */
+	width:100%;
+	float:left;
+	height:15%;
 }
 /* set style for unordered list */
 ul
@@ -68,9 +74,10 @@ ul
 a
 {
  font-weight:bold;
- color:white;
+ color:blue;
  /* makes hyper link not show underline */
  text-decoration:none;
+ 
  
 }
 /* styles for when hovering over hyper link */
@@ -80,14 +87,34 @@ a:hover
 	text-decoration:underline;
 	/* have background appear */
 	background-color:black;
+	display:block;
 }
 /* set styles for label */
 label
 {
 	/* make color white */
-	color:white;
+	color:Blue;
 	/* make font bold */
 	font-weight:bold;
+	font-size:22px;
+}
+
+/* sets style for p */
+p
+{
+	/* sets font size and color */
+	font-size:16px;
+	color:white;
+	
+}
+/* ses style for h1 */
+h1
+{
+	/* overrides bootstrap and changes color font and size */
+	color:white !important; 
+	font-size:100px !important; 
+	text-align:justify !important; 
+	font-family:fantasy !important;
 }
 /* set styles for the id pan */
 #pan
@@ -95,7 +122,7 @@ label
 	/*create container for pan */
 	position:absolute;
 	margin-left:40%;
-	margin-top:2%;
+	margin-top:10%;
 	margin-right:15%;
 	height:50%;
 	float:left;
@@ -107,15 +134,15 @@ label
 	position:absolute;
 	margin-left:40%;
 	margin-right:15%;
-	margin-top:30%;
+	margin-top:35%;
 	height:20%;
 	float:left;
 	
 }
-Button {
-	-moz-box-shadow: 3px 4px 0px 0px #1564ad;
-	-webkit-box-shadow: 3px 4px 0px 0px #1564ad;
-	box-shadow: 3px 4px 0px 0px #1564ad;
+/* sets the styles for the button */
+Button 
+{
+	
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
 	background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
 	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
@@ -124,21 +151,21 @@ Button {
 	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
 	background-color:#79bbff;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #337bc4;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:1px !important;
+	border:.2px solid #337bc4 !important;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:10px;
+	font-size:8px;
 	font-weight:bold;
-	padding:5px 33px;
+	padding:2px 33px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #528ecc;
 }
-
+/* sets what happens when the button is hovered over */
 Button:hover 
 	{
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
@@ -150,7 +177,15 @@ Button:hover
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
 	background-color:#378de5;
 }
-Button:active {
+/* set what happens when the button is activated */
+Button:active 
+{
 	position:relative;
 	top:1px;
 }
+/* sets the carousel size for the pictures to stay in */
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
